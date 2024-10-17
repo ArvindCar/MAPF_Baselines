@@ -1,0 +1,123 @@
+\documentclass[11pt]{article}
+\usepackage{latexsym}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{epsfig}
+\usepackage[tight]{subfigure}
+\usepackage{caption}
+\usepackage{booktabs}
+\usepackage{graphicx}
+
+\usepackage{amsmath}
+
+\DeclareMathOperator*{\minimize}{min}
+\DeclareMathOperator*{\maximize}{max}
+
+\usepackage{algorithm}
+ %on linux you may need to run sudo apt-get install texlive-full to install algorithm.sys
+\usepackage{algorithmic}
+
+\usepackage{verbatim}
+
+\newcommand{\handout}[6]{
+  \noindent
+  \begin{center}
+  \framebox{
+    \vbox{
+      \hbox to 5.78in { {#1} \hfill #2 }
+      \vspace{4mm}
+      \hbox to 5.78in { {\Large \hfill #5  \hfill} }
+      \vspace{1mm}
+      \hbox to 5.78in { {\Large \hfill #6  \hfill} }
+      \vspace{2mm}
+      \hbox to 5.78in { {\em #3 \hfill #4} }
+    }
+  }
+  \end{center}
+  \vspace*{4mm}
+}
+
+\newcommand{\lecture}[6]{\handout{#1}{#2}{#3}{#4}{#5}{#6}}
+\newcommand{\collision}[0]{\mathrm{collision}}
+\newcommand{\nocollision}[0]{\overline{\collision}}
+
+\newcommand*{\QED}{\hfill\ensuremath{\square}}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{observation}[theorem]{Observation}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{fact}[theorem]{Fact}
+\newtheorem{assumption}[theorem]{Assumption}
+\newtheorem{note}[theorem]{Note}
+
+% 1-inch margins, from fullpage.sty by H.Partl, Version 2, Dec. 15, 1988.
+\topmargin 0pt
+\advance \topmargin by -\headheight
+\advance \topmargin by -\headsep
+\textheight 8.9in
+\oddsidemargin 0pt
+\evensidemargin \oddsidemargin
+\marginparwidth 0.5in
+\textwidth 6.5in
+
+\parindent 0in
+\parskip 1.5ex
+%\renewcommand{\baselinestretch}{1.25}
+
+\title
+{ 
+{\small Multi Robot Planning and Coordination (16-891) Spring 2024 - The Robotics Institute} \\
+Homework 1 : Multi-Agent Path Finding (MAPF) \\
+{\small Instructor: Jiaoyang Li \;\;\; TA: Dhanvi Sreenivasan }\\
+}
+\author{Your Name Here}
+
+\begin{document}
+
+\maketitle
+
+\textbf{Collaborators: }
+%Everyone you collaborated with and a short description of what you discussed
+\begin{enumerate}
+    \item 
+\end{enumerate}
+
+\section{Task 1: Implementing Joint-State A* and Space-Time A*}
+
+\textbf{(1 points) Q - In practice, wheeled robots often follow the turn-and-move paradigm, where, at each time step, they can either wait, rotate $90^o$ clockwise, rotate $90^o$ counter-clockwise, or move forward by one cell in the direction they are pointing. Given a fleet of $N$ such robots, what is the maximum branching factor for the search tree of joint-state A*?}
+
+ A - % Answer here
+
+\section{Task 2: Implementing Prioritized Planning}
+
+\textbf{(2 points) Q - Document the changes you made in your code to handle goal related edge-cases and the failure condition. Also, state and justify the upper bound you used in your code.}
+
+A - % Answer here
+
+\textbf{(2 points) Q - Show that Prioritized Planning is Incomplete and Suboptimal}
+
+A - 
+\newpage
+\section{Task 3: Conflict-Based Search}
+
+\textbf{(1 points) Q - In the pseudocode for the CBS Algorithm, notice that line \ref{alg:cbs:collPicker} doesn't give you much information about which conflict to pick for resolution.
+\begin{itemize}
+    \item Does the strategy of picking a conflict affect the solution cost? 
+    \item Does the strategy of picking a conflict affect the computation time of the solution? 
+    \item List three strategies that one could employ to pick conflicts
+\end{itemize}}
+A - 
+
+\section{Task 5:  Challenge Your MAPF Solvers}
+
+\textbf{(2 points) Q - Document your observation on their CPU time (seconds) and the sum of costs for each of the solvers on both  the maps. Explain the differences you see between them. }
+
+A -
+ 
+
+\end{document} % Done!
