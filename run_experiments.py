@@ -77,6 +77,8 @@ if __name__ == '__main__':
                         help='The name of the instance file(s)')
     parser.add_argument('--batch', action='store_true', default=False,
                         help='Use batch output instead of animation')
+    parser.add_argument('--save', action='store_true', default=False,
+                        help='Save the solved path animation as a gif')
     parser.add_argument('--solver', type=str, default=SOLVER,
                         help='The solver to use (one of: {CBS,PBS,Independent,Prioritized}), defaults to ' + str(SOLVER))
 
